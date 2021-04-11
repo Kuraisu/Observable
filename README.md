@@ -4,7 +4,22 @@ Simple observable pattern library.
 
 ## Examples
 
-Observable in a class:
+This module is really easy to use:
+
+```typescript
+import {createObservable} from '@kuraisu/observable';
+
+const [onEvent, emitEvent] = createObservable();
+
+onEvent.add((event) => { /* ... */ });
+
+emitEvent('Hello there!');
+```
+
+### Observable in a class
+
+Here is an example of a class that provides observables to it's consumers:
+
 ```typescript
 import {
     createObservable,
