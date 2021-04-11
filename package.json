@@ -2,11 +2,21 @@
   "name": "@kuraisu/observable",
   "version": "0.0.1",
   "description": "Simple observable pattern library",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "format": "prettier --write src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "postversion": "git push && git push --tags"
   },
-  "author": "Aleksei Ermakov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuraisu/Observable.git"
+  },
+  "keywords": ["Observable", "Pattern"],
+  "author": "Aleksei Ermakov <jp.kuraisu@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.2.1",

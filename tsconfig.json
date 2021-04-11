@@ -3,8 +3,10 @@
         "baseUrl": ".",
         "jsx": "react",
         "lib": ["dom", "es2019"],
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
+        "declaration": true,
+        "outDir": "./dist",
         "noImplicitAny": true,
         "noImplicitThis": true,
         "preserveConstEnums": true,
@@ -27,4 +29,8 @@
         "src/**/*.ts",
         "declarations/*.ts",
     ],
+    "exclude": [
+        "node_modules",
+        "**/__tests__/*"
+    ]
 }
