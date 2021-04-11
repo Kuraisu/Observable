@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write src",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prepare": "npm run build",
     "postversion": "git push && git push --tags"
   },
@@ -15,11 +15,17 @@
     "type": "git",
     "url": "git+https://github.com/Kuraisu/Observable.git"
   },
-  "keywords": ["Observable", "Pattern"],
+  "keywords": [
+    "Observable",
+    "Pattern"
+  ],
   "author": "Aleksei Ermakov <jp.kuraisu@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
     "typescript": "^4.2.4"
   }
 }

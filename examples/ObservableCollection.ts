@@ -1,16 +1,8 @@
-# Observable
-
-Simple observable pattern library.
-
-## Examples
-
-Observable in a class:
-```typescript
 import {
     createObservable,
     Emitter,
     Observable,
-} from '@kuraisu/observable';
+} from '../src/Observable';
 
 export interface ItemEvent {
     itemId: string;
@@ -52,30 +44,3 @@ export class Collection {
         return this.items;
     }
 }
-```
-
-This class can be used like this:
-```typescript
-const collection = new Collection();
-
-function onAddHandler(event: ItemAddEvent): void {
-    // ...
-}
-
-function onRemoveHandler(event: ItemAddEvent): void {
-    // ...
-}
-
-collection.onAdd.add(onAddHandler);
-collection.onRemove.add(onRemoveHandler);
-
-collection.add('abc');
-// onAddHandler was called with { itemId: 'abc' } value
-
-collection.add('def');
-// onAddHandler was called with { itemId: 'def' } value
-
-collection.remove('abc');
-// onRemoveHandler was called with { itemId: 'abc' } value
-```
-
